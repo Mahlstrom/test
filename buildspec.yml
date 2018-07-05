@@ -4,8 +4,12 @@ phases:
   install:
     commands:
       - apt-get update
-      - apt-get install -y docker
+      - apt-get install -y docker.io
+      - ln -sf /usr/bin/docker.io /usr/local/bin/docker
+      - service docker.io start
+      - pip install --upgrade pip
       - pip install pytest
+
   pre_build:
     commands:
       - py.test
