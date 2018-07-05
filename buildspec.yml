@@ -4,7 +4,7 @@ phases:
   install:
     commands:
       - apt-get update
-      - apt-get install -y postgresql
+      - apt-get install -y docker
       - pip install pytest
   pre_build:
     commands:
